@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decentralized Ecommerce Store</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="#">MY拍卖</a></li>
+          <li><a href="./index.html">首页</a></li>
+          <!-- <li class="active"><a href="#"></a></li> -->
+          <li><a href="./list_item.html">发布</a></li>
+        </ul>
+      </div>
+
+    </nav>
+    <h1 class="text-center">拍品详情</h1>
+    <div class="container">
+      <div class="row" id="product-details">
+        <div style="display:none" class="alert alert-success" id="msg"></div>
+
+          <div class="col-sm-4 text-left">
+            <div id="product-image"></div>
+            <div id="product-name"></div>
+            <div id="product-auction-end"></div>
+            <div id="product-status"></div>
+            <div id="auction-info"></div>
+            <div id="product-desc">
+              <h3>拍品介绍</h3>
+            </div>
+         </div>
+
+          <div class="col-sm-8">
+
+            <div class='row'>
+              <div class="col-sm-4 text-left" style="height:60px">
+                <h3>起拍价: <span id="product-price"></span></h3>
+              </div>
+              <div class="col-sm-4 text-center" style="height:60px">
+                <form id="finalize-auction" style="height:60px; padding:13px" class="col-sm-12 text-center hidden">
+                  <button type="submit" class="btn btn-primary">确认成交</button>
+                  <input type="hidden" name="product-id" id="product-id">
+                </form>
+                <form id="unsold-auction" style="height:60px; padding:13px" class="col-sm-12 text-center hidden">
+                  <input type="hidden" name="product-id" id="product-id">
+                  <button type="submit" class="btn btn-primary">退回押金</button>
+                </form>
+              </div>
+            </div>
+
+          <div class="row">
+            <form id="bidding" class="col-sm-4 hidden">
+              <h4>Your Bid</h4>
+              <div class="form-group">
+                <label for="bid-amount">Enter Bid Amount</label>
+                <input class="form-control" type="text" name="bid-amount" id="bid-amount" placeholder="Amount > Start Price" required="required">
+              </div>
+
+              <input type="hidden" name="product-id" id="product-id">
+              <button type="submit" class="btn btn-primary">Submit Bid</button>
+            </form>
+          </div>
+
+          <div class="row">
+
+          </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
