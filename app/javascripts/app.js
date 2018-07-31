@@ -354,7 +354,7 @@ function buildProduct(product,id) {
   node.addClass("col-sm-3 text-center col-margin-bottom-1 ");
   img.addClass("panel panel-primary");
   desc.addClass("panel-footer");
-  img.append("<img src='http://ipfs.io/ipfs/"+product[3]+"' width='150px' height='150px' />");
+  img.append("<img src='http://localhost:8081/ipfs/"+product[3]+"' width='150px' height='150px' />");
   desc.append("<div>拍品:"+product[1]+"</div>");  //product Name
   desc.append("<div>结束时间:"+dateFtt("yyyy-MM-dd hh:mm:ss",new Date(product[6]*1000))+"</div>");  //product 结束拍卖时间
 //  desc.append("<div>起拍价:"+product[7]/10**18+"ETH</div>");  //product 起拍价格
